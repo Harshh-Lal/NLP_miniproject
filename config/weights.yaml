@@ -1,0 +1,8 @@
+# Sub-score weights for consistency aggregator (normalized to sum to 1.0)
+weights:
+  imperative_mood: 0.25
+  coverage: 0.35
+  risk_flags: 0.20
+  type_consistency: 0.20
+  fluency: 0.00          # Active in M3
+  alignment: 0.00        # Active in M3

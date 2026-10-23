@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    --gh-canvas-default: #0d1117;
+    --gh-canvas-subtle: #161b22;
+    --gh-canvas-inset: #010409;
+    --gh-border-default: #30363d;
+    --gh-border-muted: #21262d;
+    --gh-fg-default: #e6edf3;
+    --gh-fg-muted: #848d97;
+    --gh-fg-subtle: #6e7681;
+    --gh-accent-fg: #58a6ff;
+    --gh-success-fg: #3fb950;
+    --gh-attention-fg: #d29922;
+    --gh-danger-fg: #f85149;
+    --gh-done-fg: #a371f7;
+  }
+
+  code, pre, kbd, samp {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  }
+}
+
+/* Custom sleek GitHub dark scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+/* Subtle GitHub engineering grid pattern */
+.bg-gh-grid {
+  background-color: #0d1117;
+  background-image:
+    linear-gradient(to right, rgba(48, 54, 61, 0.45) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(48, 54, 61, 0.45) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* GitHub subtle top vignette */
+.bg-gh-radial {
+  background-image: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(22, 27, 34, 0.9) 0%, rgba(13, 17, 23, 0.98) 100%);
+}

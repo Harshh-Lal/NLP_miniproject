@@ -1,0 +1,30 @@
+# Commit type compatibility matrix for CodeReviewer.NLP
+# Exact matches yield 1.0; related/overlapping actions yield partial scores (e.g. 0.5); unrelated yield 0.0.
+
+exact_match: 1.0
+unrelated: 0.0
+
+matrix:
+  feat:
+    chore: 0.5
+    test: 0.5
+    refactor: 0.5
+  chore:
+    feat: 0.5
+    test: 0.5
+    docs: 0.5
+    refactor: 0.5
+  fix:
+    test: 0.5
+    refactor: 0.5
+    chore: 0.3
+  test:
+    feat: 0.5
+    fix: 0.5
+    chore: 0.5
+  docs:
+    chore: 0.5
+  refactor:
+    feat: 0.5
+    fix: 0.5
+    chore: 0.5

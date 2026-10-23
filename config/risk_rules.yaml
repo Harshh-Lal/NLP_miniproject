@@ -1,0 +1,81 @@
+# Sensitive architecture layers and risk detection rules for CodeReviewer.NLP
+
+layers:
+  auth:
+    name: "Authentication & Security Layer"
+    severity: "high"
+    penalty: 0.5
+    path_components:
+      - "auth"
+      - "authentication"
+      - "security"
+      - "session"
+      - "oauth"
+      - "permission"
+      - "permissions"
+      - "token"
+      - "tokens"
+      - "crypto"
+      - "login"
+    synonyms:
+      - "auth"
+      - "authentication"
+      - "login"
+      - "session"
+      - "permission"
+      - "permissions"
+      - "token"
+      - "tokens"
+      - "security"
+      - "credential"
+      - "credentials"
+      - "password"
+      - "jwt"
+      - "oauth"
+    warning: "Changes modified sensitive authentication/session/security files but the commit message omitted mention of auth/login/token/session."
+
+  database:
+    name: "Database & Migration Layer"
+    severity: "medium"
+    penalty: 0.3
+    path_components:
+      - "migration"
+      - "migrations"
+      - "schema"
+      - "db"
+      - "database"
+      - "alembic"
+    synonyms:
+      - "db"
+      - "database"
+      - "migration"
+      - "migrations"
+      - "schema"
+      - "table"
+      - "tables"
+      - "column"
+      - "sql"
+    warning: "Database migrations or schema files were modified without clear database/migration keywords in commit message."
+
+  payment:
+    name: "Billing & Financial Layer"
+    severity: "high"
+    penalty: 0.5
+    path_components:
+      - "billing"
+      - "payment"
+      - "payments"
+      - "checkout"
+      - "stripe"
+      - "paypal"
+      - "invoice"
+    synonyms:
+      - "billing"
+      - "payment"
+      - "payments"
+      - "checkout"
+      - "stripe"
+      - "invoice"
+      - "subscription"
+      - "refund"
+    warning: "Changes touch billing or payment processing code without mentioning payment/billing terms."
